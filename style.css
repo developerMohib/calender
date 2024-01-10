@@ -9,7 +9,7 @@
     gap: 20px;
     justify-items: center;
 }
-.date{
+.date, .name{
     background-color: red;
     border-radius: 5px;
     height: 100px;
@@ -18,4 +18,31 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    color: rgb(255, 255, 255);
+
+    z-index: 9;
+}
+.name{
+    background-color: rgb(39, 158, 238);
+}
+.date:hover:nth-child(2n){
+    transform:translate(1rem, 0.3rem);
+    background-color: darkgoldenrod;
+}
+.date{
+}
+.name:hover::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    border-radius: 5px;
+    z-index: -9;
 }
