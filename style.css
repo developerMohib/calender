@@ -8,15 +8,18 @@
     grid-template-columns: repeat(7, 1fr);
     gap: 20px;
     justify-items: center;
+    margin: 50px auto;
+    width: 75%;
 }
 .date, .name{
     background-color: red;
     border-radius: 5px;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     font-size: 2rem;
     cursor: pointer;
     position: relative;
@@ -45,4 +48,135 @@
     
     border-radius: 5px;
     z-index: -9;
+}
+
+/* Home work for Responsive Media */
+
+.about{
+    display: flex;
+    margin: 3rem;
+    justify-content: space-between;
+}
+.profile{
+    width: 38%;
+}
+.profile img{
+    width: 100%;
+}
+.about .text{
+    width: 60%;
+}
+.about .text h2{}
+.about .text p{}
+.about .text a{
+    text-decoration: none;
+    background-color: red;
+    padding: 10px;
+    display: inline-block;
+    margin: 30px 0px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* This is grid section */
+.grid-class{
+    display: grid;
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: column;
+}
+.red{
+    background-color: red;
+    height:50vh;
+}
+.right-yowelo{
+    background-color: yellow;
+    height: 25vh;
+}
+.blue{
+    background-color: blue;
+    height: 12vh;
+}
+.skylin{
+    background-color: aqua;
+    height: 12vh;
+}
+
+.main-img{
+    margin: 5rem 0;
+    overflow: hidden;
+}
+.main-img img{
+    width: 100%;
+}
+
+.business{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+product img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    .main-img img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .calendar {
+        gap: 8px;
+        margin: 20px auto;
+        width: 100%;
+    }
+    .date, .name{
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    
+    .about .text p i{
+        display: none;
+        visibility: hidden;
+    }
+    .main-img img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:576px){
+    .about{
+        display: block;
+        margin: 3rem;
+    }
+    .profile{
+        width: 100%;
+    }
+    .profile img{
+        width: 100%;
+    }
+    .about .text{
+        width: 100%;
+    }
+    .main-img{
+        overflow: hidden;
+    }
+    .main-img img{
+        width: 200%;
+    }
 }
